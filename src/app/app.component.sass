@@ -1,0 +1,40 @@
+$font: Roboto, sans-serif
+$background: #f5f5f5
+$primary-color: #f5f5f5
+$secondary-color: #dedede
+
+%center 
+    display: flex
+    align-items: center
+    justify-content: center
+
+= size ($width, $height)
+    width: $width
+    height: $height
+
+*
+    font-family: $font
+
+.container
+    background-color: $background
+    height: 100vh
+h1
+    background-color: $primary-color
+    margin: 0
+    padding: 20px
+    @extend %center
+h3 
+    background-color: $primary-color
+    text-align: center
+p
+    background-color: $primary-color
+    @extend %center
+
+.cont-box   
+    @extend %center
+    .box 
+        +size(250px, 100px)
+        @extend %center
+        background-color: $secondary-color
+        text-align: left
+        margin: 15px
